@@ -1,0 +1,39 @@
+server:
+  port: 8181
+
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: us-east-1
+    sqs:
+      endpoint: http://localhost:4566
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+payment:
+  queue:
+    name: publisher-queue
+
+
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: [ "health","prometheus", "metrics" ]
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
