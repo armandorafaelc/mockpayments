@@ -22,7 +22,7 @@ os seguintes programas instalados na sua maquina:
 Após estes programas instalados, poderemos prosseguir com os seguintes passos:
 
 1. Suba o Docker.
-2. Execute o comando, na seguinte pasta /infra: `docker compose up . `.
+2. Execute o comando, na seguinte pasta /infra: `docker compose up . `
 3. Acesse a pasta tf.
 4. Execute o arquivo start_tf.sh
 5. Digite: YES
